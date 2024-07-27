@@ -10,7 +10,7 @@ export default function Index() {
                 justifyContent: "center",
                 alignItems: "center",
             }}>
-            <Text className="text-red-900 font-grotesk_bold">Edit app/index.tsx to edit this screen.</Text>
+            <Text className="text-red-900 font-grotesk_bold">Edit  to edit this screen.</Text>
             <CaretLeftIcon />
             <Link href="/login">Login</Link>
             <Link href="/register">Register</Link>

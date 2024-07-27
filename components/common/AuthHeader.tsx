@@ -10,7 +10,7 @@ type Props = {
 
 const AuthHeader = ({ title, content, onPress }: Props) => {
     return (
-        <View className="px-5 mb-7">
+        <View className="px-5 mb-7 pt-[14px]">
             <Pressable className="bg-white rounded-full border-[1.15px] border-secondary-main items-center justify-center h-12 w-12" onPress={onPress}>
                 <CaretLeftIcon />
             </Pressable>

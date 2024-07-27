@@ -29,9 +29,9 @@ const LoginScreen = () => {
                     </Link>
                 </View>
 
-                <View style={{ gap: 10 }}>
+                <View style={{ gap: 40 }}>
                     <Button text="Submit" />
-                    <View style={{ gap: 1 }} className="items-center justify-center">
+                    <View style={{ gap: 4 }} className="flex-row flex-wrap items-center justify-center">
                         <Text className="font-grotesk text-white-500 text-sm">Don't have an account with us?</Text>
                         <Link href="/register" className="text-primary-main font-grotesk_medium text-base">
                             Create an account
