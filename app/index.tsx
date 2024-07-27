@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import { CaretLeftIcon } from "@/constants/icons";
+import { Link } from "expo-router";
 
 export default function Index() {
     return (
@@ -11,6 +12,8 @@ export default function Index() {
             }}>
             <Text className="text-red-900 font-grotesk_bold">Edit app/index.tsx to edit this screen.</Text>
             <CaretLeftIcon />
+            <Link href="/login">Login</Link>
+            <Link href="/register">Register</Link>
         </View>
     );
 }

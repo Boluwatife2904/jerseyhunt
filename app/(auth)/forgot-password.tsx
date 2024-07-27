@@ -1,11 +1,12 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { Text } from "react-native";
+
+import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 
 const ForgotPasswordScreen = () => {
     return (
-        <View>
+        <CustomSafeAreaView>
             <Text>ForgotPasswordScreen</Text>
-        </View>
+        </CustomSafeAreaView>
     );
 };
 

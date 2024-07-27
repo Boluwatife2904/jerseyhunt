@@ -1,11 +1,45 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, ScrollView, Text, Platform } from "react-native";
+import { Link } from "expo-router";
+
+import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
+import AuthHeader from "@/components/common/AuthHeader";
+import Input from "@/components/forms/Input";
+import Button from "@/components/ui/Button";
 
 const LoginScreen = () => {
     return (
-        <View>
-            <Text>LoginScreen</Text>
-        </View>
+        <CustomSafeAreaView>
+            <AuthHeader title="Log into your account" content="Welcome back to JerseyHunt, please enter your login details to access your account." />
+            <ScrollView
+                className="flex-"
+                contentContainerStyle={{
+                    flexGrow: 1,
+                    justifyContent: "space-between",
+                    paddingHorizontal: 24,
+                    gap: 20,
+                    ...Platform.select({
+                        android: { paddingBottom: 16 },
+                    }),
+                }}>
+                <View style={{ gap: 18 }}>
+                    <Input icon="user" placeholder="Enter phone number" inputMode="tel" />
+                    <Input icon="lock" placeholder="Enter password" />
+                    <Link href="/forgot-password" className="w-fit ml-auto text-primary-main font-grotesk text-base text-right">
+                        Forgot password?
+                    </Link>
+                </View>
+
+                <View style={{ gap: 10 }}>
+                    <Button text="Submit" />
+                    <View style={{ gap: 1 }} className="items-center justify-center">
+                        <Text className="font-grotesk text-white-500 text-sm">Don't have an account with us?</Text>
+                        <Link href="/register" className="text-primary-main font-grotesk_medium text-base">
+                            Create an account
+                        </Link>
+                    </View>
+                </View>
+            </ScrollView>
+        </CustomSafeAreaView>
     );
 };
 
