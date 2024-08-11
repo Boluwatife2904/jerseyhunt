@@ -22,7 +22,7 @@ const Input = ({ icon, placeholder, inputMode = "text" }: Props) => {
 
     return (
         <View>
-            <View className="absolute top-[15px] left-5 h-10 w-10 flex items-start justify-center">{renderIcon()}</View>
+            <View className="absolute top-[13px] left-5 h-10 w-10 flex items-start justify-center">{renderIcon()}</View>
             <TextInput
                 className="min-h-[70px] border border-primary-main text-[16px] font-grotesk_medium py-[22px] rounded-[42px] pl-[60px] pr-14"
                 placeholder={placeholder}

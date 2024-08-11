@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { PropsWithChildren } from "react";
-import { ScrollView, Platform, KeyboardAvoidingView } from "react-native";
+import {  Platform, KeyboardAvoidingView } from "react-native";
 
 const CustomSafeAreaView = ({ children, ...rest }: PropsWithChildren) => {
     return (
