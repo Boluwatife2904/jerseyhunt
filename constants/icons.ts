@@ -6,5 +6,10 @@ import PersonIcon from "@/assets/icons/person.svg";
 import ChatIcon from "@/assets/icons/chat.svg";
 import EyeIcon from "@/assets/icons/eye.svg";
 import EyeSlashIcon from "@/assets/icons/eye-slash.svg";
+import StarIcon from "@/assets/icons/star.svg";
+import PinIcon from "@/assets/icons/pin.svg";
+import BellIcon from "@/assets/icons/bell.svg";
+import SearchIcon from "@/assets/icons/search.svg";
+import MenuIcon from "@/assets/icons/menu.svg";
 
-export { CaretLeftIcon, UserIcon, LockIcon, AddressIcon, PersonIcon, ChatIcon, EyeIcon, EyeSlashIcon };
+export { CaretLeftIcon, UserIcon, LockIcon, AddressIcon, PersonIcon, ChatIcon, EyeIcon, EyeSlashIcon, StarIcon, PinIcon, BellIcon, SearchIcon, MenuIcon };

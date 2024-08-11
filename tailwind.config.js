@@ -5,6 +5,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
+                grotesk_light: ["GroteskLight"],
                 grotesk: ["Grotesk"],
                 grotesk_medium: ["GroteskMedium"],
                 grotesk_semibold: ["GroteskSemibold"],
