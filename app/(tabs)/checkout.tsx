@@ -28,7 +28,7 @@ const CheckoutScreen = () => {
                         icon={<LocationIcon />}
                         title="Home"
                         body="58 Allen Avenue Allen Avenue, Lagos,Nigeria"
-                        right={<EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />}
+                        right={<EditIcon stroke={"#0c0c08"} strokeWidth={1.5} onPress={() => router.push("/shipping-address")} />}
                     />
                     {/* SHIPPING TYPE */}
                     <Text className={SHIPPING_TITLE}>Shipping Type</Text>

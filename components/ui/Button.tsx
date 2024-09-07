@@ -1,16 +1,18 @@
 import { PropsWithChildren } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
+type ButtonVariant = "primary" | "secondary" | "white";
+
 type Props = {
     text?: string;
-    variant?: "primary" | "secondary";
+    variant?: ButtonVariant;
     disabled?: boolean;
     icon?: any;
     onPress?: () => void;
 };
 
 const Button = ({ text, variant = "primary", disabled = false, icon, onPress, children }: Props & PropsWithChildren) => {
-    const buttonVariants: Record<string, { body: string; text: string }> = {
+    const buttonVariants: Record<ButtonVariant, { body: string; text: string }> = {
         primary: {
             body: disabled ? "bg-white border-[0.5px] border-[#0000001a]" : "bg-primary-main",
             text: disabled ? "text-[#0C0C08]" : "text-secondary-main",
@@ -18,6 +20,10 @@ const Button = ({ text, variant = "primary", disabled = false, icon, onPress, ch
         secondary: {
             body: disabled ? "bg-white border-[0.5px] border-[#0000001a]" : "bg-secondary-main",
             text: disabled ? "text-[#0C0C08]" : "text-primary-main",
+        },
+        white: {
+            body: disabled ? "bg-white border-[0.5px] border-[#0000001a]" : "bg-white",
+            text: disabled ? "text-[#0C0C08]" : "text-[#0c0c08]",
         },
     };
 

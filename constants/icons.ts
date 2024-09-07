@@ -18,6 +18,8 @@ import EditIcon from "@/assets/icons/edit.svg";
 import HeartIcon from "@/assets/icons/heart.svg";
 import LocationIcon from "@/assets/icons/location.svg";
 import GiftIcon from "@/assets/icons/gift.svg";
+import CheckedIcon from "@/assets/icons/checked.svg";
+import UncheckedIcon from "@/assets/icons/unchecked.svg";
 
 export {
     CaretLeftIcon,
@@ -40,4 +42,6 @@ export {
     HeartIcon,
     LocationIcon,
     GiftIcon,
+    CheckedIcon,
+    UncheckedIcon,
 };
