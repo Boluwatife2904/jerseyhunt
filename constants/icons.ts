@@ -22,6 +22,7 @@ import CheckedIcon from "@/assets/icons/checked.svg";
 import UncheckedIcon from "@/assets/icons/unchecked.svg";
 import CarIcon from "@/assets/icons/car.svg";
 import SpinnerIcon from "@/assets/icons/spinner.svg";
+import Home1Icon from "@/assets/icons/home1.svg";
 
 export {
     CaretLeftIcon,
@@ -47,5 +48,6 @@ export {
     CheckedIcon,
     UncheckedIcon,
     CarIcon,
-    SpinnerIcon
+    SpinnerIcon,
+    Home1Icon
 };
