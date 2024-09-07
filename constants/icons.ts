@@ -20,6 +20,8 @@ import LocationIcon from "@/assets/icons/location.svg";
 import GiftIcon from "@/assets/icons/gift.svg";
 import CheckedIcon from "@/assets/icons/checked.svg";
 import UncheckedIcon from "@/assets/icons/unchecked.svg";
+import CarIcon from "@/assets/icons/car.svg";
+import SpinnerIcon from "@/assets/icons/spinner.svg";
 
 export {
     CaretLeftIcon,
@@ -44,4 +46,6 @@ export {
     GiftIcon,
     CheckedIcon,
     UncheckedIcon,
+    CarIcon,
+    SpinnerIcon
 };

@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 
 import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
@@ -6,6 +6,7 @@ import PageTitle from "@/components/common/PageTitle";
 import Button from "@/components/ui/Button";
 import ShippingTypeOrAddress from "@/components/Shipping/TypeOrAddress";
 import ShoppingList from "@/components/Checkout/ShoppingList";
+import CommonActionButtonsContainer from "@/components/common/ActionButtonsContainer";
 
 import { LocationIcon, GiftIcon, EditIcon } from "@/constants/icons";
 
@@ -16,7 +17,7 @@ const CheckoutScreen = () => {
 
     return (
         <CustomSafeAreaView>
-            <PageTitle title="Checkout" onPress={router.back} />
+            <PageTitle title="Checkout" />
             <ScrollView
                 contentContainerStyle={{ gap: 40, flexGrow: 1, marginTop: 28, paddingBottom: 160 }}
                 className="px-6"
@@ -28,7 +29,11 @@ const CheckoutScreen = () => {
                         icon={<LocationIcon />}
                         title="Home"
                         body="58 Allen Avenue Allen Avenue, Lagos,Nigeria"
-                        right={<EditIcon stroke={"#0c0c08"} strokeWidth={1.5} onPress={() => router.push("/shipping-address")} />}
+                        right={
+                            <TouchableOpacity onPress={() => router.push("/shipping-address")}>
+                                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
+                            </TouchableOpacity>
+                        }
                     />
                     {/* SHIPPING TYPE */}
                     <Text className={SHIPPING_TITLE}>Shipping Type</Text>
@@ -36,16 +41,20 @@ const CheckoutScreen = () => {
                         icon={<GiftIcon />}
                         title="Economy"
                         body="Estimated Arrival by 10th of June 2024"
-                        right={<EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />}
+                        right={
+                            <TouchableOpacity onPress={() => router.push("/shipping-type")}>
+                                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
+                            </TouchableOpacity>
+                        }
                     />
                     {/* SHOPPING LIST */}
                     <ShoppingList />
                 </View>
             </ScrollView>
             {/* CONTINUE TO PAYMENT */}
-            <View className="px-6 absolute bottom-0 left-0 w-full bg-white pt-4 pb-7">
+            <CommonActionButtonsContainer>
                 <Button text="Continue To Payment" />
-            </View>
+            </CommonActionButtonsContainer>
         </CustomSafeAreaView>
     );
 };
