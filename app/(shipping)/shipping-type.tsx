@@ -13,7 +13,7 @@ import Checkbox from "@/components/forms/Checkbox";
 const shippingTypes = [
     { id: "1", icon: <GiftIcon />, name: "Economy", description: "Estimated Arrival by 10th of June 2024" },
     { id: "2", icon: <SpinnerIcon />, name: "Regular", description: "Estimated Arrival by 8th of June 2024" },
-    { id: "3", icon: <CarIcon />, name: "Cargo", description: "Estimated Arrival by 5th of June 2024" },
+    { id: "3", icon: <CarIcon stroke="#0c0c08" />, name: "Cargo", description: "Estimated Arrival by 5th of June 2024" },
 ];
 
 const ShippingType = () => {

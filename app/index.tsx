@@ -15,6 +15,7 @@ export default function Index() {
             <Link href="/login">Login</Link>
             <Link href="/register">Register</Link>
             <Link href="/checkout">Checkout</Link>
+            <Link href="/success">Success</Link>
         </View>
     );
 }
