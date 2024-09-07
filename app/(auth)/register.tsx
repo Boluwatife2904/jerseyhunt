@@ -44,7 +44,7 @@ const RegisterScreen = () => {
                     gap: 20,
                     justifyContent: "space-between",
                     ...Platform.select({
-                        android: { paddingBottom: 16 },
+                        android: { paddingBottom: 46, ios: { paddingBottom: 30 } },
                     }),
                 }}>
                 <View style={{ gap: 16 }}>
@@ -62,32 +62,30 @@ const RegisterScreen = () => {
                     )}
                     {/* VERIFY OTP */}
                     {step === "otp" && (
-                        <>
-                            <View>
-                                <OTPTextInput
-                                    autoFocus
-                                    offTintColor={"#A8F37D"}
-                                    tintColor={"#A8F37D"}
-                                    containerStyle={{}}
-                                    textInputStyle={{
-                                        borderRadius: 100,
-                                        height: 80,
-                                        width: 80,
-                                        borderColor: "#A8F37D",
-                                        borderStyle: "solid",
-                                        borderWidth: 1,
-                                        borderBottomWidth: 1,
-                                        shadowColor: "none",
-                                        backgroundColor: "white",
-                                        fontSize: 25,
-                                        fontFamily: "GroteskSemibold",
-                                        color: "#0C0C08",
-                                    }}
-                                    placeholder="*"
-                                    placeholderTextColor="#9C9C9C"
-                                />
-                            </View>
-                        </>
+                        <View>
+                            <OTPTextInput
+                                autoFocus
+                                offTintColor={"#A8F37D"}
+                                tintColor={"#A8F37D"}
+                                containerStyle={{}}
+                                textInputStyle={{
+                                    borderRadius: 100,
+                                    height: 80,
+                                    width: 80,
+                                    borderColor: "#A8F37D",
+                                    borderStyle: "solid",
+                                    borderWidth: 1,
+                                    borderBottomWidth: 1,
+                                    shadowColor: "none",
+                                    backgroundColor: "white",
+                                    fontSize: 25,
+                                    fontFamily: "GroteskSemibold",
+                                    color: "#0C0C08",
+                                }}
+                                placeholder="*"
+                                placeholderTextColor="#9C9C9C"
+                            />
+                        </View>
                     )}
                     {/* CREATE ACCOUNT */}
                     {step === "account" && (

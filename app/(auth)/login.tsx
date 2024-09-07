@@ -5,6 +5,7 @@ import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 import AuthHeader from "@/components/common/AuthHeader";
 import Input from "@/components/forms/Input";
 import Button from "@/components/ui/Button";
+import DontHaveAccount from "@/components/common/DontHaveAccount";
 
 const LoginScreen = () => {
     const router = useRouter();
@@ -20,7 +21,7 @@ const LoginScreen = () => {
                     paddingHorizontal: 24,
                     gap: 20,
                     ...Platform.select({
-                        android: { paddingBottom: 16 },
+                        android: { paddingBottom: 46, ios: { paddingBottom: 30 } },
                     }),
                 }}>
                 <View style={{ gap: 18 }}>
@@ -33,12 +34,7 @@ const LoginScreen = () => {
 
                 <View style={{ gap: 40 }}>
                     <Button text="Submit" onPress={() => router.push("/home")} />
-                    <View style={{ gap: 4 }} className="flex-row flex-wrap items-center justify-center">
-                        <Text className="font-grotesk text-white-500 text-sm">Don't have an account with us?</Text>
-                        <Link href="/register" className="text-primary-main font-grotesk_medium text-base">
-                            Create an account
-                        </Link>
-                    </View>
+                    <DontHaveAccount />
                 </View>
             </ScrollView>
         </CustomSafeAreaView>

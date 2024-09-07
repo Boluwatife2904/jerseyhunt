@@ -6,6 +6,7 @@ import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 import AuthHeader from "@/components/common/AuthHeader";
 import Input from "@/components/forms/Input";
 import Button from "@/components/ui/Button";
+import DontHaveAccount from "@/components/common/DontHaveAccount";
 
 const ForgotPasswordScreen = () => {
     const router = useRouter();
@@ -23,17 +24,12 @@ const ForgotPasswordScreen = () => {
                     gap: 20,
                     justifyContent: "space-between",
                     paddingHorizontal: 24,
-                    ...Platform.select({ android: { paddingBottom: 16 } }),
+                    ...Platform.select({ android: { paddingBottom: 46 }, ios: { paddingBottom: 30 } }),
                 }}>
                 <Input placeholder="Enter phone number" icon="user" inputMode="numeric" />
                 <View style={{ gap: 40 }}>
                     <Button text="Submit" />
-                    <View style={{ gap: 4 }} className="flex-wrap flex-row items-center justify-center">
-                        <Text className="font-grotesk text-white-500 text-sm">Remember your password?</Text>
-                        <Link href="/login" className="text-primary-main font-grotesk_medium text-base">
-                            Login
-                        </Link>
-                    </View>
+                    <DontHaveAccount />
                 </View>
             </ScrollView>
         </CustomSafeAreaView>
