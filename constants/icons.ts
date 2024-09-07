@@ -16,6 +16,8 @@ import MinusIcon from "@/assets/icons/minus.svg";
 import CartIcon from "@/assets/icons/cart.svg";
 import EditIcon from "@/assets/icons/edit.svg";
 import HeartIcon from "@/assets/icons/heart.svg";
+import LocationIcon from "@/assets/icons/location.svg";
+import GiftIcon from "@/assets/icons/gift.svg";
 
 export {
     CaretLeftIcon,
@@ -36,4 +38,6 @@ export {
     CartIcon,
     EditIcon,
     HeartIcon,
+    LocationIcon,
+    GiftIcon,
 };

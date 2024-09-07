@@ -14,6 +14,7 @@ export default function Index() {
             <CaretLeftIcon />
             <Link href="/login">Login</Link>
             <Link href="/register">Register</Link>
+            <Link href="/checkout">Checkout</Link>
         </View>
     );
 }

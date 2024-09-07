@@ -53,7 +53,7 @@ const JerseyScreen = () => {
                     <KitsSelectSize size={form.size} setSize={($event) => updateFormData("size", $event)} />
                 </ScrollView>
                 <View style={{ gap: 8 }} className="px-6 absolute left-0 w-full bottom-0 bg-white pt-3">
-                    <Button variant="secondary" text="Customize" icon={<EditIcon />} />
+                    <Button variant="secondary" text="Customize" icon={<EditIcon stroke={'#06432D'} />} />
                     <Button icon={<CartIcon />} text="Add to Cart" />
                 </View>
             </CustomSafeAreaView>
