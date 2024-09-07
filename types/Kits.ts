@@ -9,7 +9,5 @@ export interface Kit {
     rating: string;
     year: string;
     tag: KitTag;
-    images: {
-        preview: ImageURISource;
-    };
+    images: Record<string, ImageURISource>;
 }

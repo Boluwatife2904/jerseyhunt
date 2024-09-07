@@ -11,5 +11,29 @@ import PinIcon from "@/assets/icons/pin.svg";
 import BellIcon from "@/assets/icons/bell.svg";
 import SearchIcon from "@/assets/icons/search.svg";
 import MenuIcon from "@/assets/icons/menu.svg";
+import PlusIcon from "@/assets/icons/plus.svg";
+import MinusIcon from "@/assets/icons/minus.svg";
+import CartIcon from "@/assets/icons/cart.svg";
+import EditIcon from "@/assets/icons/edit.svg";
+import HeartIcon from "@/assets/icons/heart.svg";
 
-export { CaretLeftIcon, UserIcon, LockIcon, AddressIcon, PersonIcon, ChatIcon, EyeIcon, EyeSlashIcon, StarIcon, PinIcon, BellIcon, SearchIcon, MenuIcon };
+export {
+    CaretLeftIcon,
+    UserIcon,
+    LockIcon,
+    AddressIcon,
+    PersonIcon,
+    ChatIcon,
+    EyeIcon,
+    EyeSlashIcon,
+    StarIcon,
+    PinIcon,
+    BellIcon,
+    SearchIcon,
+    MenuIcon,
+    PlusIcon,
+    MinusIcon,
+    CartIcon,
+    EditIcon,
+    HeartIcon,
+};

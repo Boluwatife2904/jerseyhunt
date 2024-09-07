@@ -9,7 +9,9 @@ export const kits: Kit[] = [
         rating: "5.0",
         year: "2024/25 Home Kit",
         images: {
-            preview: require("@/assets/images/kits/psg-preview.jpeg"),
+            preview: require("@/assets/images/kits/psg-1.jpeg"),
+            "2": require("@/assets/images/kits/psg-2.jpeg"),
+            "3": require("@/assets/images/kits/psg-3.jpeg"),
         },
     },
     {
@@ -20,7 +22,9 @@ export const kits: Kit[] = [
         rating: "5.0",
         year: "2024/25 Home Kit",
         images: {
-            preview: require("@/assets/images/kits/liverpool-preview.png"),
+            preview: require("@/assets/images/kits/liverpool-1.png"),
+            "2": require("@/assets/images/kits/liverpool-2.png"),
+            "3": require("@/assets/images/kits/liverpool-3.jpeg"),
         },
     },
     {
@@ -31,7 +35,10 @@ export const kits: Kit[] = [
         rating: "5.0",
         year: "2023/24 Home Kit",
         images: {
-            preview: require("@/assets/images/kits/barca-preview.png"),
+            preview: require("@/assets/images/kits/barcelona-1.png"),
+            "2": require("@/assets/images/kits/barcelona-2.jpeg"),
+            "3": require("@/assets/images/kits/barcelona-3.jpeg"),
+            "4": require("@/assets/images/kits/barcelona-4.png"),
         },
     },
     {
@@ -53,7 +60,11 @@ export const kits: Kit[] = [
         rating: "5.0",
         year: "2023/24 Home Kit",
         images: {
-            preview: require("@/assets/images/kits/chelsea-preview.jpeg"),
+            preview: require("@/assets/images/kits/chelsea-1.jpeg"),
+            "2": require("@/assets/images/kits/chelsea-2.jpeg"),
+            "3": require("@/assets/images/kits/chelsea-3.jpeg"),
+            "4": require("@/assets/images/kits/chelsea-4.png"),
+            "5": require("@/assets/images/kits/chelsea-5.png"),
         },
     },
     {
@@ -133,7 +144,7 @@ export const kits: Kit[] = [
             preview: require("@/assets/images/kits/argentina-preview.jpeg"),
         },
     },
-	{
+    {
         id: "13",
         amount: "₦ 20,000",
         tag: "featured",

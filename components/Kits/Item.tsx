@@ -1,4 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 
 import { Kit } from "@/types/Kits";
 import { PinIcon, StarIcon } from "@/constants/icons";
@@ -10,10 +11,14 @@ type Props = {
 const KitItem = (props: Props) => {
     const { kit } = props;
 
+    const router = useRouter();
+
+    const viewKit = () => router.push(`/kits/${kit.id}`);
+
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={viewKit}>
             <View style={{ width: "100%", height: 187, overflow: "hidden", borderRadius: 16, marginBottom: 9 }}>
-                <Image source={kit.images.preview} style={{ resizeMode: "cover", width: "100%", height: "100%" }} className="" />
+                <Image source={kit.images.preview} style={{ resizeMode: "cover", width: "100%", height: "100%" }} />
                 <TouchableOpacity className="absolute top-[10px] right-[10px] bg-secondary-main p-1 rounded-full">
                     <PinIcon />
                 </TouchableOpacity>
