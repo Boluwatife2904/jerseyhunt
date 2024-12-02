@@ -9,6 +9,7 @@ import ShoppingList from "@/components/Checkout/ShoppingList";
 import CommonActionButtonsContainer from "@/components/common/ActionButtonsContainer";
 
 import { LocationIcon, GiftIcon, EditIcon } from "@/constants/icons";
+import { SheetManager } from "react-native-actions-sheet";
 
 const SHIPPING_TITLE = "text-lg font-grotesk_medium text-[#0c0c08]";
 
@@ -53,7 +54,7 @@ const CheckoutScreen = () => {
             </ScrollView>
             {/* CONTINUE TO PAYMENT */}
             <CommonActionButtonsContainer>
-                <Button text="Continue To Payment" />
+                <Button text="Continue To Payment" onPress={() => SheetManager.show("payment-sheet")} />
             </CommonActionButtonsContainer>
         </CustomSafeAreaView>
     );
