@@ -7,7 +7,7 @@ const AuthenticationSheet = () => {
     return (
         <ActionSheet
             gestureEnabled
-            containerStyle={{ paddingTop: 14, borderTopLeftRadius: 50, borderTopRightRadius: 50 }}
+            containerStyle={{ paddingTop: 14, borderTopLeftRadius: 25, borderTopRightRadius: 25 }}
             indicatorStyle={{ width: 50.45, backgroundColor: "#B3B3B3" }}>
             <View style={{ gap: 28 }} className="pb-10 px-6 pt-4">
                 <Button text="Create an account" />
