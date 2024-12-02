@@ -21,7 +21,8 @@ const LoginScreen = () => {
                     paddingHorizontal: 24,
                     gap: 20,
                     ...Platform.select({
-                        android: { paddingBottom: 46, ios: { paddingBottom: 30 } },
+                        android: { paddingBottom: 30 },
+                        ios: { paddingBottom: 16 },
                     }),
                 }}>
                 <View style={{ gap: 18 }}>
@@ -32,8 +33,8 @@ const LoginScreen = () => {
                     </Link>
                 </View>
 
-                <View style={{ gap: 40 }}>
-                    <Button text="Submit" onPress={() => router.push("/home")} />
+                <View style={{ gap: 28 }}>
+                    <Button text="Login" onPress={() => router.push("/home")} />
                     <DontHaveAccount />
                 </View>
             </ScrollView>

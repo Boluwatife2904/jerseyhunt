@@ -4,6 +4,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { StatusBar } from "react-native";
 import "react-native-reanimated";
+import { SheetProvider } from "react-native-actions-sheet";
+import "@/components/sheets";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,13 +30,15 @@ export default function RootLayout() {
 
     return (
         <>
-            <Stack initialRouteName="(tabs)">
-                <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="(shipping)" options={{ headerShown: false }} />
-                <Stack.Screen name="index" options={{ headerShown: false }} />
-            </Stack>
-            <StatusBar barStyle={"dark-content"} />
+            <SheetProvider>
+                <Stack initialRouteName="(tabs)">
+                    <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                    <Stack.Screen name="(shipping)" options={{ headerShown: false }} />
+                    <Stack.Screen name="index" options={{ headerShown: false }} />
+                </Stack>
+                <StatusBar barStyle={"dark-content"} />
+            </SheetProvider>
         </>
     );
 }

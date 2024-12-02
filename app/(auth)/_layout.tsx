@@ -1,7 +1,7 @@
-import { Slot, Stack } from "expo-router";
+import { Stack, Slot } from "expo-router";
 
 const AuthLayout = () => {
-    return <Stack screenOptions={{ headerShown: false }} />;
+    return <Slot screenOptions={{ headerShown: false }} />;
 };
 
 export default AuthLayout;

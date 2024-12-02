@@ -34,7 +34,7 @@ const Button = ({ text, variant = "primary", disabled = false, icon, onPress, ch
             onPress={onPress}>
             <View style={{ gap: 8 }} className="flex-row items-end">
                 {icon}
-                <Text className={`font-grotesk_medium text-xl !leading-[0px] ${buttonVariants[variant].text}`}>{text}</Text>
+                <Text className={`font-grotesk_medium text-xl pb-[1px] !leading-[0px] ${buttonVariants[variant].text}`}>{text}</Text>
             </View>
         </TouchableOpacity>
     );

@@ -1,5 +1,5 @@
-import { Text, ScrollView, View, Platform } from "react-native";
-import { useState } from "react";
+import { Text, ScrollView, View, Platform, TouchableOpacity } from "react-native";
+import { useState, useRef } from "react";
 import { Link, useRouter } from "expo-router";
 
 import OTPTextInput from "react-native-otp-textinput";
@@ -23,14 +23,37 @@ const RegisterScreen = () => {
     const router = useRouter();
 
     const [step, setStep] = useState<"verify" | "otp" | "account">("verify");
+    const [timer, setTimer] = useState(25);
+    const timerInterval = useRef<NodeJS.Timeout>();
 
     const handleBack = () => {
         if (step === "verify") router.push("/login");
         if (step === "otp") setStep("verify");
         if (step === "account") setStep("otp");
     };
+    
+    const clearTimer = () => {
+        if (timerInterval.current) clearInterval(timerInterval.current);
+    };
+
+    const startTimer = () => {
+        setTimer(25);
+        timerInterval.current = setInterval(() => {
+            setTimer((prevTimer) => {
+                if (prevTimer <= 1) {
+                    clearTimer();
+                    return 0;
+                }
+                return prevTimer - 1;
+            });
+        }, 1000);
+    };
+
     const handleContinue = () => {
-        if (step === "verify") setStep("otp");
+        if (step === "verify") {
+            setStep("otp");
+            startTimer();
+        }
         if (step === "otp") setStep("account");
     };
 
@@ -44,7 +67,8 @@ const RegisterScreen = () => {
                     gap: 20,
                     justifyContent: "space-between",
                     ...Platform.select({
-                        android: { paddingBottom: 46, ios: { paddingBottom: 30 } },
+                        android: { paddingBottom: 32 },
+                        ios: { paddingBottom: 12 },
                     }),
                 }}>
                 <View style={{ gap: 16 }}>
@@ -62,7 +86,7 @@ const RegisterScreen = () => {
                     )}
                     {/* VERIFY OTP */}
                     {step === "otp" && (
-                        <View>
+                        <View style={{ gap: 18 }}>
                             <OTPTextInput
                                 autoFocus
                                 offTintColor={"#A8F37D"}
@@ -85,6 +109,18 @@ const RegisterScreen = () => {
                                 placeholder="*"
                                 placeholderTextColor="#9C9C9C"
                             />
+                            <View>
+                                {timer > 0 ? (
+                                    <Text className="text-center text-white-500 text-sm font-grotesk">
+                                        Resend code in
+                                        <Text className="text-primary-main text-base"> 00:{String(timer).padStart(2, "0")}</Text>
+                                    </Text>
+                                ) : (
+                                    <TouchableOpacity onPress={startTimer}>
+                                        <Text className="font-grotesk_medium text-base text-primary-main text-center">Resend Code</Text>
+                                    </TouchableOpacity>
+                                )}
+                            </View>
                         </View>
                     )}
                     {/* CREATE ACCOUNT */}

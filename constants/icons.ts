@@ -23,6 +23,7 @@ import UncheckedIcon from "@/assets/icons/unchecked.svg";
 import CarIcon from "@/assets/icons/car.svg";
 import SpinnerIcon from "@/assets/icons/spinner.svg";
 import Home1Icon from "@/assets/icons/home1.svg";
+import GoogleIcon from "@/assets/icons/google.svg";
 
 export {
     CaretLeftIcon,
@@ -49,5 +50,6 @@ export {
     UncheckedIcon,
     CarIcon,
     SpinnerIcon,
-    Home1Icon
+    Home1Icon,
+    GoogleIcon,
 };

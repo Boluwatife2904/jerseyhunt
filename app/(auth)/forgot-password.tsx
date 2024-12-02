@@ -24,10 +24,10 @@ const ForgotPasswordScreen = () => {
                     gap: 20,
                     justifyContent: "space-between",
                     paddingHorizontal: 24,
-                    ...Platform.select({ android: { paddingBottom: 46 }, ios: { paddingBottom: 30 } }),
+                    ...Platform.select({ android: { paddingBottom: 32 }, ios: { paddingBottom: 16 } }),
                 }}>
                 <Input placeholder="Enter phone number" icon="user" inputMode="numeric" />
-                <View style={{ gap: 40 }}>
+                <View style={{ gap: 28 }}>
                     <Button text="Submit" />
                     <DontHaveAccount />
                 </View>

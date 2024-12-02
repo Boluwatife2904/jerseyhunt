@@ -29,11 +29,9 @@ const ImagesPreview = ({ images }: Props) => {
             </View>
             <View style={{ gap: 17 }} className="items-center justify-center flex-row">
                 {Object.values(images).map((image, index) => (
-                    <>
-                        <TouchableOpacity key={index} onPress={() => setImage(image)}>
-                            <Image source={image} className="h-12 w-12 shrink-0 rounded-full" resizeMode="cover" />
-                        </TouchableOpacity>
-                    </>
+                    <TouchableOpacity key={index} onPress={() => setImage(image)}>
+                        <Image source={image} className="h-12 w-12 shrink-0 rounded-full" resizeMode="cover" />
+                    </TouchableOpacity>
                 ))}
             </View>
         </View>

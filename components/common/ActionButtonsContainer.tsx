@@ -6,7 +6,7 @@ type Props = {
     gap?: number;
 };
 
-const ActionButtonsContainer = ({ classes = "pt-4 pb-7", gap = 0, children }: PropsWithChildren<Props>) => {
+const ActionButtonsContainer = ({ classes = "pt-4 pb-0", gap = 0, children }: PropsWithChildren<Props>) => {
     return (
         <View style={{ gap }} className={`absolute bottom-0 left-0 w-full px-6 bg-white ${classes}`}>
             {children}
