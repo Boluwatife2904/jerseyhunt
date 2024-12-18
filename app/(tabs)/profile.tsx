@@ -1,11 +1,11 @@
-import { View, Text } from "react-native";
-import React from "react";
+import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
+import PageTitle from "@/components/common/PageTitle";
 
 const ProfileScreen = () => {
   return (
-    <View>
-      <Text>ProfileScreen</Text>
-    </View>
+    <CustomSafeAreaView>
+      <PageTitle title="Profile" />
+    </CustomSafeAreaView>
   );
 };
 

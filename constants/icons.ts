@@ -29,6 +29,9 @@ import MastercardIcon from "@/assets/icons/mastercard.svg";
 import CaretRightIcon from "@/assets/icons/caret-right.svg";
 import MobileIcon from "@/assets/icons/mobile.svg";
 import CloseCircleIcon from "@/assets/icons/close-circle.svg";
+import TabsHome from "@/assets/icons/tabs-home.svg";
+import TabsCheckout from "@/assets/icons/tabs-checkout.svg";
+import TabsProfile from "@/assets/icons/tabs-profile.svg";
 
 export {
   CaretLeftIcon,
@@ -62,4 +65,7 @@ export {
   CaretRightIcon,
   MobileIcon,
   CloseCircleIcon,
+  TabsCheckout,
+  TabsHome,
+  TabsProfile,
 };
