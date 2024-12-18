@@ -7,6 +7,7 @@ import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 
 import { MobileIcon, GoogleIcon } from "@/constants/icons";
 import Checkbox from "@/components/forms/Checkbox";
+import { SheetManager } from "react-native-actions-sheet";
 
 const paymentMethods = [
   { key: "bank", title: "Bank Transfer ", icon: <MobileIcon /> },
@@ -21,7 +22,7 @@ const PaymentMethodsScreen = () => {
       <PageTitle title="Payment Method" />
 
       <View style={{ gap: 28 }} className="px-5 pt-10">
-        <PaymentMethod label="Credit & Debit Card" />
+        <PaymentMethod label="Credit & Debit Card" onPress={() => SheetManager.show("credit-debit-cards-sheet")} />
 
         <View style={{ gap: 18 }}>
           <Text className="font-grotesk_medium text-[#0C0C08] text-lg">More Payment Options</Text>
