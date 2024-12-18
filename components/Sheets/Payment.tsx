@@ -23,7 +23,7 @@ const PaymentSheet = () => {
 
   const confirmPayment = () => {
     SheetManager.hide("payment-sheet");
-    router.push("/success");
+    router.push("/error");
   };
 
   return (

@@ -28,6 +28,7 @@ import DiscountIcon from "@/assets/icons/discount.svg";
 import MastercardIcon from "@/assets/icons/mastercard.svg";
 import CaretRightIcon from "@/assets/icons/caret-right.svg";
 import MobileIcon from "@/assets/icons/mobile.svg";
+import CloseCircleIcon from "@/assets/icons/close-circle.svg";
 
 export {
   CaretLeftIcon,
@@ -60,4 +61,5 @@ export {
   MastercardIcon,
   CaretRightIcon,
   MobileIcon,
+  CloseCircleIcon,
 };

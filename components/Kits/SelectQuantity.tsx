@@ -30,7 +30,7 @@ const SelectQuantity = (props: Props) => {
       </TouchableOpacity>
       <Text className="text-lg font-grotesk_medium text-[#0c0c08]">{quantity}</Text>
       <TouchableOpacity className={BUTTON_CLASSES} disabled={quantity === max} onPress={increaseQuantity}>
-        <PlusIcon />
+        <PlusIcon color="#0c0c08" />
       </TouchableOpacity>
     </View>
   );

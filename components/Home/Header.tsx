@@ -2,7 +2,13 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 import { BellIcon, MenuIcon, SearchIcon } from "@/constants/icons";
 
-const Header = () => {
+interface Props {
+  onSearchPress: () => void;
+}
+
+const Header = (props: Props) => {
+  const { onSearchPress } = props;
+
   return (
     <View className="px-[18.5px] py-[26px] border-b-[0.5px] border-[#E6E6E6] flex-row justify-between items-center">
       <View style={{ gap: 12 }} className="flex-row items-center">
@@ -15,7 +21,7 @@ const Header = () => {
         <TouchableOpacity className="h-[34px] w-[34px] items-center justify-center">
           <BellIcon />
         </TouchableOpacity>
-        <TouchableOpacity className="h-[34px] w-[34px] items-center justify-center">
+        <TouchableOpacity className="h-[34px] w-[34px] items-center justify-center" onPress={onSearchPress}>
           <SearchIcon />
         </TouchableOpacity>
       </View>
