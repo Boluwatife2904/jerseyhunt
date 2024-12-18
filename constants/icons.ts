@@ -27,6 +27,7 @@ import GoogleIcon from "@/assets/icons/google.svg";
 import DiscountIcon from "@/assets/icons/discount.svg";
 import MastercardIcon from "@/assets/icons/mastercard.svg";
 import CaretRightIcon from "@/assets/icons/caret-right.svg";
+import MobileIcon from "@/assets/icons/mobile.svg";
 
 export {
   CaretLeftIcon,
@@ -58,4 +59,5 @@ export {
   DiscountIcon,
   MastercardIcon,
   CaretRightIcon,
+  MobileIcon,
 };

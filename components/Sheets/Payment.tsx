@@ -18,6 +18,7 @@ const PaymentSheet = () => {
 
   const viewPaymentMethods = () => {
     SheetManager.hide("payment-sheet");
+    router.push("/payment-methods");
   };
 
   const confirmPayment = () => {
@@ -54,9 +55,7 @@ const PaymentSheet = () => {
         </View>
 
         <View className="justify-center items-center">
-          <Text className="font-grotesk_light leading-4 text-xs text-[#A1A1A1]">
-            By placing an order you agree to our
-          </Text>
+          <Text className="font-grotesk_light leading-4 text-xs text-[#A1A1A1]">By placing an order you agree to our</Text>
           <TouchableOpacity>
             <Text className="font-grotesk_light leading-4 text-xs text-primary-main">Terms And Conditions.</Text>
           </TouchableOpacity>
