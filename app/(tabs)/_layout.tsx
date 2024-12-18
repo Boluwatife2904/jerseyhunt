@@ -1,7 +1,7 @@
 import { Slot } from "expo-router";
 
 const MainLayout = () => {
-    return <Slot />;
+  return <Slot />;
 };
 
 export default MainLayout;

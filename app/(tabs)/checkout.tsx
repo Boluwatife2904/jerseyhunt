@@ -14,50 +14,47 @@ import { SheetManager } from "react-native-actions-sheet";
 const SHIPPING_TITLE = "text-lg font-grotesk_medium text-[#0c0c08]";
 
 const CheckoutScreen = () => {
-    const router = useRouter();
+  const router = useRouter();
 
-    return (
-        <CustomSafeAreaView>
-            <PageTitle title="Checkout" />
-            <ScrollView
-                contentContainerStyle={{ gap: 40, flexGrow: 1, marginTop: 28, paddingBottom: 160 }}
-                className="px-6"
-                showsVerticalScrollIndicator={false}>
-                <View style={{ gap: 18 }} className="">
-                    {/* SHIPPING ADDRESS */}
-                    <Text className={SHIPPING_TITLE}>Shipping Address</Text>
-                    <ShippingTypeOrAddress
-                        icon={<LocationIcon />}
-                        title="Home"
-                        body="58 Allen Avenue Allen Avenue, Lagos,Nigeria"
-                        right={
-                            <TouchableOpacity onPress={() => router.push("/shipping-address")}>
-                                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
-                            </TouchableOpacity>
-                        }
-                    />
-                    {/* SHIPPING TYPE */}
-                    <Text className={SHIPPING_TITLE}>Shipping Type</Text>
-                    <ShippingTypeOrAddress
-                        icon={<GiftIcon />}
-                        title="Economy"
-                        body="Estimated Arrival by 10th of June 2024"
-                        right={
-                            <TouchableOpacity onPress={() => router.push("/shipping-type")}>
-                                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
-                            </TouchableOpacity>
-                        }
-                    />
-                    {/* SHOPPING LIST */}
-                    <ShoppingList />
-                </View>
-            </ScrollView>
-            {/* CONTINUE TO PAYMENT */}
-            <CommonActionButtonsContainer>
-                <Button text="Continue To Payment" onPress={() => SheetManager.show("payment-sheet")} />
-            </CommonActionButtonsContainer>
-        </CustomSafeAreaView>
-    );
+  return (
+    <CustomSafeAreaView>
+      <PageTitle title="Checkout" />
+      <ScrollView contentContainerStyle={{ gap: 40, flexGrow: 1, marginTop: 28, paddingBottom: 160 }} className="px-6" showsVerticalScrollIndicator={false}>
+        <View style={{ gap: 18 }} className="">
+          {/* SHIPPING ADDRESS */}
+          <Text className={SHIPPING_TITLE}>Shipping Address</Text>
+          <ShippingTypeOrAddress
+            icon={<LocationIcon />}
+            title="Home"
+            body="58 Allen Avenue Allen Avenue, Lagos,Nigeria"
+            right={
+              <TouchableOpacity onPress={() => router.push("/shipping-address")}>
+                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
+              </TouchableOpacity>
+            }
+          />
+          {/* SHIPPING TYPE */}
+          <Text className={SHIPPING_TITLE}>Shipping Type</Text>
+          <ShippingTypeOrAddress
+            icon={<GiftIcon />}
+            title="Economy"
+            body="Estimated Arrival by 10th of June 2024"
+            right={
+              <TouchableOpacity onPress={() => router.push("/shipping-type")}>
+                <EditIcon stroke={"#0c0c08"} strokeWidth={1.5} />
+              </TouchableOpacity>
+            }
+          />
+          {/* SHOPPING LIST */}
+          <ShoppingList />
+        </View>
+      </ScrollView>
+      {/* CONTINUE TO PAYMENT */}
+      <CommonActionButtonsContainer>
+        <Button text="Continue To Payment" onPress={() => SheetManager.show("payment-sheet")} />
+      </CommonActionButtonsContainer>
+    </CustomSafeAreaView>
+  );
 };
 
 export default CheckoutScreen;

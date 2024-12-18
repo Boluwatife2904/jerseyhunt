@@ -1,15 +1,6 @@
 import { View, TextInput, InputModeOptions, TouchableOpacity } from "react-native";
 
-import {
-  AddressIcon,
-  ChatIcon,
-  LockIcon,
-  UserIcon,
-  PersonIcon,
-  EyeIcon,
-  EyeSlashIcon,
-  DiscountIcon,
-} from "@/constants/icons";
+import { AddressIcon, ChatIcon, LockIcon, UserIcon, PersonIcon, EyeIcon, EyeSlashIcon, DiscountIcon } from "@/constants/icons";
 import { useState } from "react";
 
 type Props = {
@@ -41,9 +32,7 @@ const Input = ({ icon, placeholder, inputMode = "text" }: Props) => {
         secureTextEntry={secureTextEntry}
       />
       {icon === "lock" && (
-        <TouchableOpacity
-          className="absolute top-6 bg-white right-6"
-          onPress={() => setSecureTextEntry(!secureTextEntry)}>
+        <TouchableOpacity className="absolute top-6 bg-white right-6" onPress={() => setSecureTextEntry(!secureTextEntry)}>
           {secureTextEntry ? <EyeSlashIcon /> : <EyeIcon />}
         </TouchableOpacity>
       )}

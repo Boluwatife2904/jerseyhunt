@@ -8,11 +8,11 @@ registerSheet("added-to-cart-sheet", AddedToCartSheet);
 registerSheet("payment-sheet", PaymentSheet);
 
 declare module "react-native-actions-sheet" {
-    interface Sheets {
-        "authentication-sheet": SheetDefinition;
-        "added-to-cart-sheet": SheetDefinition;
-        "payment-sheet": SheetDefinition;
-    }
+  interface Sheets {
+    "authentication-sheet": SheetDefinition;
+    "added-to-cart-sheet": SheetDefinition;
+    "payment-sheet": SheetDefinition;
+  }
 }
 
 export {};
