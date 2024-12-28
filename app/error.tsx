@@ -1,5 +1,6 @@
 import { ScrollView } from "react-native";
 import { Stack, useRouter } from "expo-router";
+import React from "react";
 
 import CommonSuccessOrErrorState from "@/components/common/SuccessOrErrorState";
 import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";

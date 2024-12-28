@@ -34,7 +34,7 @@ const LoginScreen = () => {
         </View>
 
         <View style={{ gap: 28 }}>
-          <Button text="Login" onPress={() => router.push("/home")} />
+          <Button text="Login" disabled onPress={() => router.push("/home")} />
           <DontHaveAccount />
         </View>
       </ScrollView>

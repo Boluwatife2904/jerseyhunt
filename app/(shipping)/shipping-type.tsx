@@ -1,5 +1,5 @@
 import { ScrollView, TouchableOpacity, View } from "react-native";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 import PageTitle from "@/components/common/PageTitle";
@@ -9,6 +9,7 @@ import CommonActionButtonsContainer from "@/components/common/ActionButtonsConta
 
 import { CarIcon, GiftIcon, SpinnerIcon } from "@/constants/icons";
 import Checkbox from "@/components/forms/Checkbox";
+import { useRouter } from "expo-router";
 
 const shippingTypes = [
   { id: "1", icon: <GiftIcon />, name: "Economy", description: "Estimated Arrival by 10th of June 2024" },
@@ -18,6 +19,7 @@ const shippingTypes = [
 
 const ShippingType = () => {
   const [selected, setSelected] = useState("1");
+  const router = useRouter();
 
   return (
     <>
@@ -41,7 +43,7 @@ const ShippingType = () => {
           ))}
         </ScrollView>
         <CommonActionButtonsContainer>
-          <Button text="Apply" />
+          <Button text="Apply" onPress={router.back} />
         </CommonActionButtonsContainer>
       </CustomSafeAreaView>
     </>

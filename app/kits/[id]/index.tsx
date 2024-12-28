@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { SheetManager } from "react-native-actions-sheet";
 

@@ -20,7 +20,7 @@ const HomeScreen = () => {
   return (
     <CustomSafeAreaView>
       <HomeHeader onSearchPress={() => setShowSearch(true)} />
-      <ScrollView className="px-6 py-[14px] bg-white" contentContainerStyle={{ gap: 34, flexGrow: 1, paddingBottom: 28 }} showsVerticalScrollIndicator={false}>
+      <ScrollView className="px-6 pt-[14px] bg-white" contentContainerStyle={{ gap: 34, flexGrow: 1, paddingBottom: 132 }} showsVerticalScrollIndicator={false}>
         <View style={{ gap: 18 }}>
           <TopLeagues />
           <FeaturedKit kit={getKitsByTag("featured")[0]} />

@@ -1,5 +1,5 @@
-import { ScrollView, TouchableOpacity, View } from "react-native";
-import { useState } from "react";
+import { ScrollView, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
 
 import PageTitle from "@/components/common/PageTitle";
 import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
@@ -9,6 +9,7 @@ import Button from "@/components/ui/Button";
 import CommonActionButtonsContainer from "@/components/common/ActionButtonsContainer";
 
 import { LocationIcon } from "@/constants/icons";
+import { useRouter } from "expo-router";
 
 const addresses = [
   { id: "1", name: "Home", address: "58 Allen Avenue Allen Avenue, Lagos,Nigeria" },
@@ -19,6 +20,7 @@ const addresses = [
 
 const ShippingAddress = () => {
   const [selected, setSelected] = useState("1");
+  const router = useRouter();
 
   return (
     <>
@@ -40,7 +42,7 @@ const ShippingAddress = () => {
 
         <CommonActionButtonsContainer gap={10}>
           <Button text="Add New Shipping Address" variant="white" />
-          <Button text="Apply" />
+          <Button text="Apply" onPress={router.back} />
         </CommonActionButtonsContainer>
       </CustomSafeAreaView>
     </>

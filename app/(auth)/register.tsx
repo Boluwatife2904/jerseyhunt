@@ -1,5 +1,5 @@
 import { Text, ScrollView, View, Platform, TouchableOpacity } from "react-native";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useRouter } from "expo-router";
 
 import OTPTextInput from "react-native-otp-textinput";
@@ -8,6 +8,8 @@ import CustomSafeAreaView from "@/components/layout/CustomSafeAreaView";
 import AuthHeader from "@/components/common/AuthHeader";
 import Input from "@/components/forms/Input";
 import Button from "@/components/ui/Button";
+import Checkbox from "@/components/forms/Checkbox";
+import { TickChecked, TickUnchecked } from "@/constants/icons";
 
 const stepsMap = {
   verify: { title: "Enter your phone number", content: "A 4-code OTP will be sent to your number to verify your account.", buttonText: "Send code" },
@@ -25,6 +27,7 @@ const RegisterScreen = () => {
   const [step, setStep] = useState<"verify" | "otp" | "account">("verify");
   const [timer, setTimer] = useState(25);
   const timerInterval = useRef<NodeJS.Timeout>();
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   const handleBack = () => {
     if (step === "verify") router.push("/login");
@@ -53,15 +56,16 @@ const RegisterScreen = () => {
     if (step === "verify") {
       setStep("otp");
       startTimer();
-    }
-    if (step === "otp") setStep("account");
+    } else if (step === "otp") setStep("account");
+    else router.replace("/home");
   };
 
   return (
     <CustomSafeAreaView>
-      <AuthHeader title={stepsMap[step].title} content={stepsMap[step].content} onPress={handleBack} />
+      <AuthHeader title={stepsMap[step].title} content={stepsMap[step]?.content ?? ""} onPress={handleBack} />
       <ScrollView
         className="px-5"
+        keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
           flexGrow: 1,
           gap: 20,
@@ -131,10 +135,16 @@ const RegisterScreen = () => {
               <Input placeholder="Enter home address" icon="address" />
               <Input placeholder="Enter password" icon="lock" />
               <Input placeholder="Enter password" icon="lock" />
+              <TouchableOpacity style={{ gap: 8 }} className="flex-row items-start" activeOpacity={0.7} onPress={() => setAcceptedTerms(!acceptedTerms)}>
+                {acceptedTerms ? <TickChecked /> : <TickUnchecked />}
+                <Text className="font-grotesk_light text-[13.3px] leading-[18px] text-[#00000099] flex-row flex-wrap">
+                  I agree to the processing of my personal information and the <Text className="font-grotesk text-primary-main">Terms & Conditions. </Text>
+                </Text>
+              </TouchableOpacity>
             </>
           )}
         </View>
-        <Button text={stepsMap[step].buttonText} onPress={handleContinue} />
+        <Button text={stepsMap[step].buttonText} disabled={!acceptedTerms && step === "account"} onPress={handleContinue} />
       </ScrollView>
     </CustomSafeAreaView>
   );

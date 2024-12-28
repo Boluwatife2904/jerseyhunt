@@ -32,6 +32,8 @@ import CloseCircleIcon from "@/assets/icons/close-circle.svg";
 import TabsHome from "@/assets/icons/tabs-home.svg";
 import TabsCheckout from "@/assets/icons/tabs-checkout.svg";
 import TabsProfile from "@/assets/icons/tabs-profile.svg";
+import TickChecked from "@/assets/icons/tick-checked.svg";
+import TickUnchecked from "@/assets/icons/tick-unchecked.svg";
 
 export {
   CaretLeftIcon,
@@ -68,4 +70,6 @@ export {
   TabsCheckout,
   TabsHome,
   TabsProfile,
+  TickChecked,
+  TickUnchecked,
 };
