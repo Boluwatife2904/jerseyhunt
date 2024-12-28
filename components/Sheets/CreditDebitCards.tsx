@@ -10,7 +10,7 @@ const cards = [
 
 const CreditDebitCards = () => {
   return (
-    <ActionSheet gestureEnabled containerStyle={{ paddingTop: 14, borderTopLeftRadius: 25, borderTopRightRadius: 25 }} indicatorStyle={{ width: 50.45, backgroundColor: "#B3B3B3" }}>
+    <ActionSheet gestureEnabled containerStyle={{ paddingTop: 14, borderTopLeftRadius: 25, borderTopRightRadius: 25, paddingBottom: 32 }} indicatorStyle={{ width: 50.45, backgroundColor: "#B3B3B3" }}>
       <View style={{ gap: 28 }} className="py-[29px] px-6">
         <Text className="text-center font-grotesk_medium text-lg">Credit & Debit Card </Text>
         <View style={{ gap: 19 }}>

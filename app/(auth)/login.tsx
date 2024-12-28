@@ -14,6 +14,7 @@ const LoginScreen = () => {
     <CustomSafeAreaView>
       <AuthHeader title="Log into your account" content="Welcome back to JerseyHunt, please enter your login details to access your account." />
       <ScrollView
+        keyboardShouldPersistTaps="handled"
         className="flex-"
         contentContainerStyle={{
           flexGrow: 1,
@@ -34,7 +35,7 @@ const LoginScreen = () => {
         </View>
 
         <View style={{ gap: 28 }}>
-          <Button text="Login" disabled onPress={() => router.push("/home")} />
+          <Button text="Login" onPress={() => router.push("/home")} />
           <DontHaveAccount />
         </View>
       </ScrollView>

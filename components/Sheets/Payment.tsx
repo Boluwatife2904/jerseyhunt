@@ -27,7 +27,7 @@ const PaymentSheet = () => {
   };
 
   return (
-    <ActionSheet gestureEnabled containerStyle={{ paddingTop: 14, borderTopLeftRadius: 25, borderTopRightRadius: 25 }} indicatorStyle={{ width: 50.45, backgroundColor: "#B3B3B3" }}>
+    <ActionSheet gestureEnabled containerStyle={{ paddingTop: 14, borderTopLeftRadius: 25, borderTopRightRadius: 25, paddingBottom: 32 }} indicatorStyle={{ width: 50.45, backgroundColor: "#B3B3B3" }}>
       <View style={{ gap: 28 }} className="px-6 pt-3">
         <Input placeholder="Discount code" icon="discount" />
 
